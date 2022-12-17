@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3过渡动画</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            margin: 200px auto;
+            background-color: pink;
+            border-radius: 15px;
+            transition: all 1s;
+        }
+
+        .box::after {
+            width: inherit;
+            height: inherit;
+            content: '★';
+            color: #fff;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            /* 垂直居中 */
+            align-items: center;
+            /* 水平居中 */
+            transition-duration: 1s;
+        }
+
+        .box:hover {
+            height: 200px;
+            width: 200px;
+            background-color: skyblue;
+            border-radius: 50%;
+        }
+
+        .box:hover:after {
+            content: '♥';
+            color: #fff;
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
